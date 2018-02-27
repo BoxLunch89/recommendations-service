@@ -35,7 +35,15 @@ const find = (listing, callback) => {
   }).where('listing_id').equals(listing);
 };
 
+const dropDB = () => {
+  mongoose.connection.collections['recommendations'].drop( function(err) {
+    console.log('collection dropped');
+});
+}
+
 seedDB(genAllData(200));
+// dropDB();
 exports.seedDB = seedDB;
 exports.find = find;
 exports.Recommendations = Recommendations;
+exports.dropDB = dropDB;
