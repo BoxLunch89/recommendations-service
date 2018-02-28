@@ -36,10 +36,13 @@ const find = (listing, callback) => {
 };
 
 const dropDB = () => {
-  mongoose.connection.collections['recommendations'].drop( function(err) {
+  mongoose.connection.collection.recommendations.drop((err) => {
+    if (err) {
+      console.log(err);
+    }
     console.log('collection dropped');
-});
-}
+  });
+};
 
 // seedDB(genAllData(200));
 // dropDB();
