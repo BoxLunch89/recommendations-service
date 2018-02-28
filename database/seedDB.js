@@ -41,7 +41,7 @@ const dropDB = () => {
 });
 }
 
-seedDB(genAllData(200));
+// seedDB(genAllData(200));
 // dropDB();
 exports.seedDB = seedDB;
 exports.find = find;
