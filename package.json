@@ -11,7 +11,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "build": "webpack -p",
+    "build": "webpack -p --watch",
     "start": "nodemon server/index.js",
     "seed": "node database/seedDB.js"
   },
@@ -28,6 +28,7 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "express": "^4.16.2",
     "faker": "^4.1.0",
+    "jquery": "^3.3.1",
     "mongoose": "^5.0.6",
     "react": "^16.2.0",
     "react-dom": "^16.2.0"
