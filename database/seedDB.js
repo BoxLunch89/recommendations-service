@@ -16,13 +16,37 @@ const listingSchema = new mongoose.Schema({
   recommendations: [recSchema],
 });
 
-const recommendation = mongoose.model('recommendation', listingSchema);
+const Recommendations = mongoose.model('recommendation', listingSchema);
 
 const seedDB = (data) => {
-  const promise = recommendation.create(data);
+  const promise = Recommendations.create(data);
   promise.then(() => {
     console.log('Data has been entered into database');
   });
 };
 
+const find = (listing, callback) => {
+  Recommendations.find((err, recommendation) => {
+    if (err) {
+      console.log(err);
+    } else {
+      callback(recommendation);
+    }
+  }).where('listing_id').equals(listing);
+};
+
+const dropDB = () => {
+  mongoose.connection.collection.recommendations.drop((err) => {
+    if (err) {
+      console.log(err);
+    }
+    console.log('collection dropped');
+  });
+};
+
+// seedDB(genAllData(200));
+// dropDB();
 exports.seedDB = seedDB;
+exports.find = find;
+exports.Recommendations = Recommendations;
+exports.dropDB = dropDB;
