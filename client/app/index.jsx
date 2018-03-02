@@ -2,16 +2,18 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
 import styles from './index.css';
+import { RecommendationList } from './recommendationList.jsx';
+import { Header } from './header.jsx';
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       recs: [
-        {title: "Milesview", description: "Architecto aut explicabo a animi temporibus cumque…iti magni quidem est in. Doloremque vitae soluta.", price: "385.00", photo_url: "http://lorempixel.com/640/480"}],
+        {title: "apple", description: "Architecto aut explica", price: "385.00", photo_url: "http://lorempixel.com/640/480",  price: "385.00", photo_url: "http://lorempixel.com/640/480", _id: "5a98d10d90e89f9b927deb7b"}],
     };
   }
-  componentWillMount() {
+  componentDidMount() {
     this.fetchRecommendations();
   }
   fetchRecommendations() {
@@ -29,7 +31,15 @@ class App extends React.Component {
     });
   }
   render() {
-    return (this.state.recs[0].title);
+    return (
+      <div className="main">
+        <div className="header">
+          <Header />
+        </div>
+          <RecommendationList />
+
+      </div>
+    );
   }
 }
 
