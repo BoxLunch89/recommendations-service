@@ -1,13 +1,18 @@
 const express = require('express');
-const router = express.Router;
+const { router } = require('./routes');
+const mongoose = require('mongoose');
+const path = require('path');
+// const bodyParser = require('body-parser');
+// const cors = require('cors');
 
 const app = express();
 
-app.get('/recommendations/:id', (req, res) => {
+// mongoose.connect('mongodb://localhost/recommendations');
+// app.use(cors());
+app.use(express.static(path.join(__dirname, '/../client/public')));
+app.use('/listings', router);
 
-})
-
-app.listen(3005, () => {
-  console.log('Listening on port 3005...');
+app.listen(3000, () => {
+  console.log('Listening on port 3000...');
 });
 

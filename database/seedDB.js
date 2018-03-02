@@ -11,7 +11,7 @@ const recSchema = new mongoose.Schema({
 });
 
 const listingSchema = new mongoose.Schema({
-  listing_id: Number,
+  listing_id: { type: Number, unique: true },
   listing_title: String,
   recommendations: [recSchema],
 });
@@ -44,7 +44,6 @@ const dropDB = () => {
   });
 };
 
-// seedDB(genAllData(200));
 // dropDB();
 exports.seedDB = seedDB;
 exports.find = find;

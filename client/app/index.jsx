@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
+import styles from './index.css';
 
 class App extends React.Component {
   constructor(props) {
@@ -9,12 +10,8 @@ class App extends React.Component {
       recommendations: ['test, test2, test3'],
     };
   }
-  componentWillMount() {
-    this.fetchRecommendations();
-  }
   fetchRecommendations() {
     const that = this;
-    console.log('check')
     $.ajax({
       type: 'GET',
       url: '/listings/5/recommendations',
