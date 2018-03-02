@@ -11,7 +11,7 @@ const seedDB = (data) => {
 };
 
 
-seedDB(genAllData(5));
+seedDB(genAllData(200));
 
 exports.seedDB = seedDB;
 

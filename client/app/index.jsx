@@ -10,7 +10,19 @@ class App extends React.Component {
     super(props);
     this.state = {
       recs: [
-        {title: "apple", description: "Architecto aut explica", price: "385.00", photo_url: "http://lorempixel.com/640/480",  price: "385.00", photo_url: "http://lorempixel.com/640/480", _id: "5a98d10d90e89f9b927deb7b"}],
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
+      ],
     };
   }
   componentDidMount() {
@@ -36,8 +48,7 @@ class App extends React.Component {
         <div className="header">
           <Header />
         </div>
-          <RecommendationList />
-
+        <RecommendationList recs={this.state.recs} />
       </div>
     );
   }

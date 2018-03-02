@@ -34,7 +34,7 @@ const genOneData = (id) => {
   const recommendation = {
     listing_id: id,
     listing_title: faker.address.city(),
-    recommendations: genRecommendation(2),
+    recommendations: genRecommendation(12),
   };
   return recommendation;
 };
