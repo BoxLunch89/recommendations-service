@@ -1,5 +1,7 @@
 /* image is 261 x 174 pix */
 .img {
-  width: 261px;
   height: 174px;
+  margin-top: -7px;
+  vertical-align: middle;
+  width: 261px;
 }
