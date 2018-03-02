@@ -1,5 +1,6 @@
 import React from 'react';
 import { RecommendationListEntry } from './recommendationListEntry.jsx';
+import styles from 'RecommendationList.css';
 
 const RecommendationList = ({ recs }) => {
   const recs1 = recs.slice(0, 4);
