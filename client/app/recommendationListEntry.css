@@ -1,18 +1,70 @@
-/* image is 261 x 174 pix */
+.title {
+  color: #069;
+  cursor: pointer;
+  display: block;
+  font-size: 17px;
+  font-weight: bold;
+  height: 44px;
+  margin: 5px 16px;
+  overflow: hidden;
+}
+
+.description {
+  font-family: Arial, Tahoma;
+  display: inline;
+  font-size: 12px;
+  text-align: left;
+  color: #2c2c2c;
+}
+
+.price {
+
+}
+
 .img {
-  height: 174px;
-  margin-top: -7px;
-  vertical-align: middle;
-  width: 261px;
+  background: #eee;
+  cursor: pointer;
+  height: 160px;
+  left: 0px;
+  line-height: 160px;
+  position: absolute;
+  text-align: center;
+  top: 0px;
+  transition: opacity 100ms linear;
+  width: 100%;
 }
 
 .divRow {
   display: table-row;
   width: auto;
+  text-align: justify;
+  height: 100%;
+  overflow: hidden;
+  padding: 0;
+  display: block;
+  margin: 18px 0;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
 }
 
 .divCell {
   float: left;
   display: table-column;
-  width: 200px;
+  margin-left: 0.66%;
+  margin-top: 15px;
+  background-color: #fff;
+  border: 1px solid #e9e8e6;
+  border-bottom-color: #dad7c8;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  display: block;
+  float: left;
+  margin: 1.33%;
+  padding: 166px 0 8px;
+  position: relative;
+  opacity: 1;
+  transition: box-shadow linear 100ms;
+  text-align: left;
+  width: 17.66%;
 }

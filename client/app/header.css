@@ -1,3 +1,8 @@
 .header {
-  font-size: 24px;
+  font-size: medium;
+  font-weight: bold;
+  font-family: Arial,Tahoma,"Bitstream Vera Sans",sans-serif;
+  line-height: 28px;
+  color: #000a12;
+  margin: 44px 0 8px;
 };
