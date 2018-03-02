@@ -1,5 +1,8 @@
 const express = require('express');
-const { Recommendations } = require('../database/seedDB');
+const { Recommendations } = require('../database/dataGen');
+const mongoose = require('mongoose');
+
+mongoose.connect('mongodb://localhost/recommendations');
 
 const router = express.Router();
 
