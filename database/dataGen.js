@@ -1,4 +1,20 @@
 const faker = require('faker');
+const mongoose = require('mongoose');
+
+const recSchema = new mongoose.Schema({
+  title: String,
+  description: String,
+  price: String,
+  photo_url: String,
+});
+
+const listingSchema = new mongoose.Schema({
+  listing_id: { type: Number, unique: true },
+  listing_title: String,
+  recommendations: [recSchema],
+});
+
+const Recommendations = mongoose.model('recommendation', listingSchema);
 
 const genRecommendation = (amount) => {
   const recommendations = [];
@@ -32,3 +48,4 @@ const genAllData = (count) => {
 };
 
 exports.genAllData = genAllData;
+exports.Recommendations = Recommendations;
