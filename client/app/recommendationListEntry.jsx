@@ -1,13 +1,15 @@
 import React from 'react';
 import styles from './recommendationListEntry.css';
 
-const RecommendationListEntry = ({ rec }) => (
-  <div className="entry">
-    <img class={styles.img} src={rec.photo_url} alt="Recommended Places"></img>
-    <div>{rec.title}</div>
-    <div>{rec.description}</div>
-    <div>{rec.price}</div>
-  </div>
-);
+const RecommendationListEntry = ({ row }) => (
+  <div className={styles.divTableRow}>{row.map((item) => (
+    <div className={styles.divCell}>
+    <img class={styles.img} src={item.photo_url} alt="Recommended Places"></img>
+    <div>{item.title}</div>
+    <div>{item.description}</div>
+    <div>{item.price}</div>
+    </div>))}
+    </div>
+    )
 
 exports.RecommendationListEntry = RecommendationListEntry;
