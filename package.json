@@ -11,7 +11,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "build": "webpack -p",
+    "build": "webpack -p --watch",
     "start": "nodemon server/index.js",
     "seed": "node database/seedDB.js"
   },
@@ -24,6 +24,8 @@
     ]
   },
   "dependencies": {
+    "body-parser": "^1.18.2",
+    "cors": "^2.8.4",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
     "express": "^4.16.2",
