@@ -1,7 +1,8 @@
 import React from 'react';
+import styles from './header.css';
 
 const Header = () => (
-  <h2>Travelers' Top Experiences To Book Ahead</h2>
+  <div className={styles.header}>Travelers' Top Experiences To Book Ahead</div>
 );
 
 exports.Header = Header;

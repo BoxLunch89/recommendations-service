@@ -1,7 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import styles from './index.css';
 import { RecommendationList } from './recommendationList.jsx';
 import { Header } from './header.jsx';
 
