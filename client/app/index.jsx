@@ -7,17 +7,21 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recommendations: ['test, test2, test3'],
+      recs: [
+        {title: "Milesview", description: "Architecto aut explicabo a animi temporibus cumque…iti magni quidem est in. Doloremque vitae soluta.", price: "385.00", photo_url: "http://lorempixel.com/640/480"}],
     };
+  }
+  componentWillMount() {
+    this.fetchRecommendations();
   }
   fetchRecommendations() {
     const that = this;
     $.ajax({
       type: 'GET',
-      url: '/listings/5/recommendations',
+      url: '/listings/2/recommendations',
       success: (data) => {
-        console.log('Sucess!: ', data);
-        that.setState({ recommendations: data });
+        console.log('Sucess!: ', (data[0].recommendations));
+        that.setState({ recs: data[0].recommendations });
       },
       error: () => {
         console.log('error');
@@ -25,7 +29,7 @@ class App extends React.Component {
     });
   }
   render() {
-    return (this.state.recommendations);
+    return (this.state.recs[0].title);
   }
 }
 
