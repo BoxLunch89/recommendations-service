@@ -48,6 +48,7 @@ a {
 .ribbon .price {
   padding: 8px 12px;
   font-size: 12px;
+  font-weight: bold;
   line-height: 14px;
   position: absolute;
   z-index: 1;
@@ -99,4 +100,8 @@ a {
   transition: box-shadow linear 100ms;
   text-align: left;
   width: 21.66%;
+}
+
+.divCell :hover {
+  box-shadow: grey;
 }
