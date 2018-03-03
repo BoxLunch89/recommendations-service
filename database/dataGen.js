@@ -1,6 +1,8 @@
 const faker = require('faker');
 const mongoose = require('mongoose');
-
+const fakerURL = faker.image.imageUrl();
+const randomPhoto = 'http://lorempixel.com/400/200';
+const randomPhoto2 = 'https://source.unsplash.com/random/400x200';
 const recSchema = new mongoose.Schema({
   title: String,
   description: String,
@@ -23,7 +25,7 @@ const genRecommendation = (amount) => {
       title: faker.address.city(),
       description: faker.lorem.sentences(),
       price: faker.commerce.price(),
-      photo_url: faker.image.imageUrl(),
+      photo_url: randomPhoto2,
     };
     recommendations.push(recommendation);
   }

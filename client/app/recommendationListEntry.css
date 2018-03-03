@@ -11,13 +11,14 @@
 
 .description {
   font-family: Arial, Tahoma;
-  display: inline;
+  /* display: inline; */
   font-size: 12px;
   text-align: left;
   color: #2c2c2c;
-}
-
-.price {
+  overflow: hidden;
+  height: 40px;
+  line-height: 13.3px;
+  width: auto;
 
 }
 
@@ -33,6 +34,44 @@
   transition: opacity 100ms linear;
   width: 100%;
 }
+
+/* .ribbon {
+  -webkit-transform: rotate(-45deg); 
+     -moz-transform: rotate(-45deg); 
+      -ms-transform: rotate(-45deg); 
+       -o-transform: rotate(-45deg); 
+          transform: rotate(-45deg); 
+    border: 25px solid transparent;
+    border-top: 25px solid #757575;
+    position: absolute;
+    bottom: 20px;
+    right: -50px;
+    padding: 0 10px;
+    width: 120px;
+    color: white;
+    font-family: sans-serif;
+    size: 11px;
+} */
+.ribbon .price {
+  padding: 8px 12px;
+  font-size: 12px;
+  line-height: 14px;
+  position: absolute;
+  z-index: 1;
+  top: 12px;
+  right: auto;
+  bottom: auto;
+  left: -6px;
+  max-width: 100%;
+  border-radius: 0 3px 3px 0;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+  font-weight: bold;
+  background-color: #fc0;;
+  border-color: #b51000;
+  color: #000;
+  -webkit-font-smoothing: antialiased;
+}​
 
 .divRow {
   display: table-row;
