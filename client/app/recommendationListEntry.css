@@ -1,5 +1,15 @@
+a {
+  font-family: Arial, Tahoma;
+  font-size: 12px;
+  text-align: left;
+  overflow: hidden;
+  height: 40px;
+  line-height: 13.3px;
+  text-decoration: none;
+}
 .title {
   color: #069;
+  font-family: Arial, Tahoma;
   cursor: pointer;
   display: block;
   font-size: 17px;
@@ -9,9 +19,9 @@
   overflow: hidden;
 }
 
+
 .description {
   font-family: Arial, Tahoma;
-  /* display: inline; */
   font-size: 12px;
   text-align: left;
   color: #2c2c2c;
