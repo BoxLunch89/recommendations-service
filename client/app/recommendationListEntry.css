@@ -6,6 +6,7 @@ a {
   height: 40px;
   line-height: 13.3px;
   text-decoration: none;
+  box-shadow: none;
 }
 .title {
   color: #069;
@@ -17,6 +18,7 @@ a {
   height: 44px;
   margin: 5px 16px;
   overflow: hidden;
+  box-shadow: none;
 }
 
 
@@ -29,6 +31,7 @@ a {
   height: 40px;
   line-height: 13.3px;
   width: auto;
+  box-shadow: none;
 
 }
 
@@ -43,6 +46,7 @@ a {
   top: 0px;
   transition: opacity 100ms linear;
   width: 100%;
+  box-shadow: none;
 }
 
 .ribbon .price {
@@ -65,6 +69,7 @@ a {
   border-color: #b51000;
   color: #000;
   -webkit-font-smoothing: antialiased;
+  box-shadow: none;
 }​
 
 .divRow {
@@ -100,8 +105,30 @@ a {
   transition: box-shadow linear 100ms;
   text-align: left;
   width: 21.66%;
+  z-index: 3;
+}
+
+.card :hover {
+  box-shadow: 1px 1px 7px 9px rgba(0,0,0,0.1);
+}
+
+.img :hover {
+  box-shadow: none;
+}
+
+.description :hover {
+  box-shadow: none;
+}
+
+.title :hover {
+  text-decoration: underline;
+  box-shadow: none;
+}
+
+.ribbon .price :hover {
+  box-shadow: none;
 }
 
 .divCell :hover {
-  box-shadow: grey;
+  box-shadow: none;
 }
