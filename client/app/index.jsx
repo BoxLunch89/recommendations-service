@@ -33,7 +33,6 @@ class App extends React.Component {
       type: 'GET',
       url: '/listings/2/recommendations',
       success: (data) => {
-        console.log('Sucess!: ', (data[0].recommendations));
         that.setState({ recs: data[0].recommendations });
       },
       error: () => {

@@ -1,8 +1,6 @@
 const faker = require('faker');
 const mongoose = require('mongoose');
-const fakerURL = faker.image.imageUrl();
-const randomPhoto = 'http://lorempixel.com/400/200';
-const randomPhoto2 = 'https://source.unsplash.com/random/400x200';
+
 const photoURLs = [
   'https://cache-graphicslib.viator.com/graphicslib/thumbs360x240/3306/SITours/san-francisco-golden-gate-bridge-to-sausalito-bike-tour-in-san-francisco-516113.jpg',
   'https://cache-graphicslib.viator.com/graphicslib/thumbs360x240/5713/SITours/san-francisco-coastal-walking-tour-from-the-golden-gate-bridge-to-in-san-francisco-546039.jpg',
