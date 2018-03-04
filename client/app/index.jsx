@@ -8,20 +8,7 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recs: [
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-        {title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"},
-      ],
+      recs: new Array(4).fill({title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"}),
     };
   }
   componentDidMount() {
@@ -33,7 +20,6 @@ class App extends React.Component {
       type: 'GET',
       url: '/listings/2/recommendations',
       success: (data) => {
-        console.log('Sucess!: ', (data[0].recommendations));
         that.setState({ recs: data[0].recommendations });
       },
       error: () => {
@@ -44,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="main">
-        <div className="header">
+        <div>
           <Header />
         </div>
         <RecommendationList recs={this.state.recs} />
