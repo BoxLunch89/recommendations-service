@@ -1,16 +1,12 @@
 a {
-  font-family: Arial, Tahoma;
-  font-size: 12px;
-  text-align: left;
   overflow: hidden;
   height: 40px;
   line-height: 13.3px;
   text-decoration: none;
-  box-shadow: none;
 }
+
 .title {
   color: #069;
-  font-family: Arial, Tahoma;
   cursor: pointer;
   display: block;
   font-size: 17px;
@@ -18,21 +14,14 @@ a {
   height: 44px;
   margin: 5px 16px;
   overflow: hidden;
-  box-shadow: none;
 }
 
-
 .description {
-  font-family: Arial, Tahoma;
-  font-size: 12px;
-  text-align: left;
   color: #2c2c2c;
   overflow: hidden;
   height: 40px;
   line-height: 13.3px;
   width: auto;
-  box-shadow: none;
-
 }
 
 .img {
@@ -46,12 +35,10 @@ a {
   top: 0px;
   transition: opacity 100ms linear;
   width: 100%;
-  box-shadow: none;
 }
 
 .ribbon .price {
   padding: 8px 12px;
-  font-size: 12px;
   font-weight: bold;
   line-height: 14px;
   position: absolute;
@@ -68,11 +55,9 @@ a {
   background-color: #fc0;;
   border-color: #b51000;
   color: #000;
-  -webkit-font-smoothing: antialiased;
-  box-shadow: none;
 }​
 
-.divRow {
+.recommendationRow {
   display: table-row;
   width: auto;
   text-align: justify;
@@ -85,19 +70,17 @@ a {
   -webkit-font-smoothing: antialiased;
 }
 
-.divCell {
+.recommendation {
   float: left;
+  font-size: 12px;
+  font-family: Arial, Tahoma;
   display: table-column;
   margin-left: 0.66%;
   margin-top: 15px;
   background-color: #fff;
   border: 1px solid #e9e8e6;
   border-bottom-color: #dad7c8;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
-  display: block;
-  float: left;
   margin: 1.33%;
   padding: 166px 0 8px;
   position: relative;
@@ -112,23 +95,10 @@ a {
   box-shadow: 1px 1px 7px 9px rgba(0,0,0,0.1);
 }
 
-.img :hover {
-  box-shadow: none;
-}
-
-.description :hover {
-  box-shadow: none;
-}
-
 .title :hover {
   text-decoration: underline;
-  box-shadow: none;
 }
 
-.ribbon .price :hover {
-  box-shadow: none;
-}
-
-.divCell :hover {
+.recommendation :hover {
   box-shadow: none;
 }

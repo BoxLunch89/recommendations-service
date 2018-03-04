@@ -30,7 +30,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="main">
-        <div className="header">
+        <div>
           <Header />
         </div>
         <RecommendationList recs={this.state.recs} />

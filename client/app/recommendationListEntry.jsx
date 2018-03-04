@@ -1,10 +1,10 @@
 import React from 'react';
-import { divRow, card, divCell, img, ribbon, price, title, description } from './recommendationListEntry.css';
+import { recommendationRow, card, recommendation, img, ribbon, price, title, description } from './recommendationListEntry.css';
 
 const RecommendationListEntry = ({ row }) => (
-  <div className={divRow}>{row.map(item => (
+  <div className={recommendationRow}>{row.map(item => (
     <div className={card}>
-      <div className={divCell}>
+      <div className={recommendation}>
         <img className={img} src={item.photo_url} alt="Recommended Places" />
         <div className={ribbon}>
           <div className={price}>{`from $${item.price} *`}</div>
