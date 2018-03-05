@@ -8,12 +8,12 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recs: new Array(4).fill({title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"}),
+      recs: [],
     };
   }
   componentDidMount() {
-    let pathName = window.location.pathname;
-    let listing = Number(pathName.split('/')[2]) || 5;
+    const pathName = window.location.pathname;
+    const listing = Number(pathName.split('/')[2]) || 5;
     this.fetchRecommendations(listing);
   }
   fetchRecommendations(listing) {
