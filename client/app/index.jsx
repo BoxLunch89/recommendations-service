@@ -12,13 +12,15 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    this.fetchRecommendations();
+    let pathName = window.location.pathname;
+    let listing = Number(pathName.split('/')[2]) || 5;
+    this.fetchRecommendations(listing);
   }
-  fetchRecommendations() {
+  fetchRecommendations(listing) {
     const that = this;
     $.ajax({
       type: 'GET',
-      url: '/listings/2/recommendations',
+      url: `/listings/${listing}/recommendations`,
       success: (data) => {
         that.setState({ recs: data[0].recommendations });
       },
