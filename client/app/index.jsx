@@ -8,17 +8,19 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      recs: new Array(4).fill({title: "a", description: "a", price: "a", photo_url: "http://lorempixel.com/640/480", _id: "a"}),
+      recs: [],
     };
   }
   componentDidMount() {
-    this.fetchRecommendations();
+    const pathName = window.location.pathname;
+    const listing = this.props.id;
+    this.fetchRecommendations(listing);
   }
-  fetchRecommendations() {
+  fetchRecommendations(listing) {
     const that = this;
     $.ajax({
       type: 'GET',
-      url: '/listings/2/recommendations',
+      url: `/listings/${listing}/recommendations`,
       success: (data) => {
         that.setState({ recs: data[0].recommendations });
       },

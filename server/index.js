@@ -4,7 +4,7 @@ const { router } = require('./routes');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '/../client/public')));
+app.use('/listings/:listing_id', express.static(path.join(__dirname, '/../client/public')));
 app.use('/listings', router);
 
 app.listen(3005, () => {
