@@ -1,29 +1,22 @@
 a {
   text-decoration: none;
+  margin: 5px 16px;
 }
 
-.title {
-  color: #069;
-  cursor: pointer;
-  font-size: 17px;
-  font-weight: bold;
-
+.card :hover {
+  box-shadow: 1px 1px 7px 9px rgba(0,0,0,0.1);
 }
 
-/* color: #069;
-cursor: pointer;
-display: block;
-font-size: 17px;
-font-weight: bold;
-height: 44px;
-margin: 5px 16px;
-overflow: hidden; */
+.recommendation :hover {
+  box-shadow: none;
+}
 
 .description {
   color: #2c2c2c;
   overflow: hidden;
-  height: 40px;
+  height: 60px;
   line-height: 13.3px;
+  margin: 5px 16px;
   width: auto;
 }
 
@@ -34,43 +27,26 @@ overflow: hidden; */
   left: 0px;
   line-height: 160px;
   position: absolute;
-  text-align: center;
   top: 0px;
-  transition: opacity 100ms linear;
   width: 100%;
 }
 
 .ribbon .price {
   padding: 8px 12px;
   font-weight: bold;
-  line-height: 14px;
   position: absolute;
-  z-index: 1;
   top: 12px;
-  right: auto;
-  bottom: auto;
   left: -6px;
-  max-width: 100%;
   border-radius: 0 3px 3px 0;
-  box-sizing: border-box;
-  box-shadow: 2px 2px 0 rgba(0,0,0,0.1);
   font-weight: bold;
   background-color: #fc0;;
-  border-color: #b51000;
   color: #000;
 }​
 
 .recommendationRow {
   display: table-row;
-  width: auto;
-  text-align: justify;
-  height: 100%;
   overflow: hidden;
-  padding: 0;
-  display: block;
-  margin: 44px 60px 8px;
-  position: relative;
-  -webkit-font-smoothing: antialiased;
+  margin: 44px 60px 8px 60px;
 }
 
 .recommendation {
@@ -78,30 +54,27 @@ overflow: hidden; */
   font-size: 12px;
   font-family: Arial, Tahoma;
   display: table-column;
-  margin-left: 0.66%;
-  margin-top: 15px;
+  margin: 24px 10px 8px 10px;
   background-color: #fff;
   border: 1px solid #e9e8e6;
   border-bottom-color: #dad7c8;
   box-sizing: border-box;
-  margin: 1.33%;
   padding: 166px 0 8px;
   position: relative;
-  opacity: 1;
-  transition: box-shadow linear 100ms;
-  text-align: left;
   width: 21.66%;
-  z-index: 3;
 }
 
-.card :hover {
-  box-shadow: 1px 1px 7px 9px rgba(0,0,0,0.1);
+.title {
+  color: #069;
+  cursor: pointer;
+  font-size: 17px;
+  font-weight: bold;
+  height: 24px;
+  margin: 5px 16px;
+  overflow: hidden;
 }
 
 .title :hover {
-  text-decoration: underline;
+  text-decoration: underline !important;
 }
 
-.recommendation :hover {
-  box-shadow: none;
-}
