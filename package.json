@@ -13,7 +13,9 @@
     "test:coverage": "jest --coverage",
     "build": "webpack -p --watch",
     "start": "nodemon server/index.js",
-    "seed": "node database/seedDB.js"
+    "seed": "node database/seedDB.js",
+    "drop": "node database/dropDB.js",
+    "proxy": "nodemon proxy/proxy.js"
   },
   "jest": {
     "setupFiles": [
