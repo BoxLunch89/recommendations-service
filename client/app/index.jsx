@@ -13,7 +13,6 @@ class Recommendations extends React.Component {
   }
   componentDidMount() {
     const pathName = window.location.pathname;
-    // const listing = Number(pathName.split('/')[2]) || 5;
     const listing = this.props.id;
     this.fetchRecommendations(listing);
   }
