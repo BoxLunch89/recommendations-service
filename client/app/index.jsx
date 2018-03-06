@@ -4,7 +4,7 @@ import $ from 'jquery';
 import { RecommendationList } from './recommendationList.jsx';
 import { Header } from './header.jsx';
 
-class App extends React.Component {
+class Recommendations extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -20,7 +20,7 @@ class App extends React.Component {
     const that = this;
     $.ajax({
       type: 'GET',
-      url: `/listings/${listing}/recommendations`,
+      url: `http://localhost:3005/listings/${listing}/recommendations`,
       success: (data) => {
         that.setState({ recs: data[0].recommendations });
       },
@@ -41,4 +41,5 @@ class App extends React.Component {
   }
 }
 
-ReactDOM.render(<App />, document.getElementById('app'));
+window.Recommendations = Recommendations;
+
