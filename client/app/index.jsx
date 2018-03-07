@@ -1,8 +1,7 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import $ from 'jquery';
-import { RecommendationList } from './recommendationList.jsx';
-import { Header } from './header.jsx';
+import { RecommendationList } from './recommendationList';
+import { Header } from './header';
 
 class Recommendations extends React.Component {
   constructor(props) {
@@ -12,7 +11,6 @@ class Recommendations extends React.Component {
     };
   }
   componentDidMount() {
-    const pathName = window.location.pathname;
     const listing = this.props.id;
     this.fetchRecommendations(listing);
   }

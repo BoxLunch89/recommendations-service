@@ -1,5 +1,5 @@
 const React = require('react');
-const { seedDB, Recommendations } = require('../database/seedDB');
+const { Recommendations } = require('../database/dataGen');
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/recommendations');

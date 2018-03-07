@@ -24,15 +24,16 @@ const config = {
         loader: 'css-loader',
         query: {
           modules: true,
-          localIdentName: '[name]__[local]___[hash:base64:5]'
-        }
-      }
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
     ],
   },
   output: {
     path: BUILD_DIR,
     filename: 'bundle.js',
   },
+  resolve: { extensions: ['.js', '.jsx'] },
 };
 
 module.exports = config;

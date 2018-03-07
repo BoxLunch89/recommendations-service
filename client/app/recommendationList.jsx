@@ -1,5 +1,5 @@
 import React from 'react';
-import { RecommendationListEntry } from './recommendationListEntry.jsx';
+import { RecommendationListEntry } from './recommendationListEntry';
 import { recommendationTable } from './recommendationList.css';
 
 const RecommendationList = ({ recs }) => {
