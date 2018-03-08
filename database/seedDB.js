@@ -7,6 +7,7 @@ const seedDB = (data) => {
   const promise = Recommendations.create(data);
   promise.then(() => {
     console.log('Data has been entered into database');
+    process.exit();
   });
 };
 

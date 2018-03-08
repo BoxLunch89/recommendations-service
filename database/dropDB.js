@@ -9,6 +9,7 @@ const dropDB = () => {
       console.log(err);
     } else {
       console.log('Collection removed');
+      process.exit();
     }
   });
 };
