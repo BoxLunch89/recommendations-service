@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Recommendations } = require('./dataGen');
 
-mongoose.connect('mongodb://localhost/recommendations');
+mongoose.connect('mongodb://database/recommendations');
 
 const dropDB = () => {
   Recommendations.remove({}, (err) => {
@@ -9,6 +9,7 @@ const dropDB = () => {
       console.log(err);
     } else {
       console.log('Collection removed');
+      process.exit();
     }
   });
 };
