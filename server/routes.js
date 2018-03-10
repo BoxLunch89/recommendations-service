@@ -2,7 +2,7 @@ const express = require('express');
 const { Recommendations } = require('../database/dataGen');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://localhost/recommendations');
+mongoose.connect('mongodb://database/recommendations');
 
 const router = express.Router();
 
