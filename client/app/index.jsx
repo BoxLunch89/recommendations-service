@@ -18,7 +18,7 @@ class Recommendations extends React.Component {
     const that = this;
     $.ajax({
       type: 'GET',
-      url: `http://localhost:3005/listings/${listing}/recommendations`,
+      url: `/listings/${listing}/recommendations`,
       success: (data) => {
         that.setState({ recs: data[0].recommendations });
       },
