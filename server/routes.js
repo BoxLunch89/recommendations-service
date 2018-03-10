@@ -2,11 +2,11 @@ const express = require('express');
 const { Recommendations } = require('../database/dataGen');
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb://database/recommendations');
+mongoose.connect('mongodb://localhost/recommendations');
 
 const router = express.Router();
 
-router.get('/:listing_id/recommendations', (req, res) => {
+router.get('/:listing_id', (req, res) => {
   const id = req.params.listing_id;
   Recommendations.find({ listing_id: id })
     .exec((err, data) => {

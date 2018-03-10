@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { genAllData, Recommendations } = require('./dataGen');
 
-mongoose.connect('mongodb://database/recommendations');
+mongoose.connect('mongodb://localhost/recommendations');
 
 const seedDB = (data) => {
   const promise = Recommendations.create(data);

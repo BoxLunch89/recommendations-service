@@ -1,7 +1,7 @@
 const mongoose = require('mongoose');
 const { Recommendations } = require('./dataGen');
 
-mongoose.connect('mongodb://database/recommendations');
+mongoose.connect('mongodb://localhost/recommendations');
 
 const dropDB = () => {
   Recommendations.remove({}, (err) => {
