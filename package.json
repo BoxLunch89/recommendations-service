@@ -16,7 +16,6 @@
     "start": "npm run drop && npm run seed && npm run build && node server/index.js",
     "seed": "node database/seedDB.js",
     "drop": "node database/dropDB.js",
-    "proxy": "node proxy/proxy.js",
     "start-dev": "nodemon server/index.js"
   },
   "jest": {
